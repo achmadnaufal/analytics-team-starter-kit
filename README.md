@@ -45,3 +45,8 @@ analytics-team-starter-kit/
 ## License
 
 MIT License — free to use, modify, and distribute.
+
+## 🚀 New Features (2026-03-02)
+- Add role-based access control framework and competency matrix
+- Enhanced error handling and edge case coverage
+- Comprehensive unit tests and integration examples
