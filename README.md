@@ -1,52 +1,33 @@
 # Analytics Team Starter Kit
 
-Complete starter kit for bootstrapping a data analytics team from scratch
+Team operations toolkit for analytics leads: SLA tracking, workload distribution,
+and data quality monitoring for NbS/ESG data teams.
 
 ## Features
-- Data ingestion from CSV/Excel input files
-- Automated analysis and KPI calculation
-- Summary statistics and trend reporting
-- Sample data generator for testing and development
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
+- **Team metrics dashboard**: ticket volume, SLA %, resolution time, workload per analyst
+- **Data quality scorecard**: completeness, uniqueness, composite quality score per dataset
+- **Configurable SLA**: adjust target resolution days per team agreement
+- **Sample data**: PUR Projet-style analytics team ticket log
 
 ## Quick Start
 
 ```python
-from src.main import TeamStarterKit
+from src.main import AnalyticsTeamStarterKit
 
-analyzer = TeamStarterKit()
-df = analyzer.load_data("data/sample.csv")
-result = analyzer.analyze(df)
-print(result)
+kit = AnalyticsTeamStarterKit(config={"sla_days": 5, "team_size": 3})
+df = kit.load_data("sample_data/team_tickets.csv")
+
+metrics = kit.team_metrics_dashboard(df)
+print(f"SLA Compliance:   {metrics['sla_compliance_pct']:.1f}%")
+print(f"Avg Resolution:   {metrics['avg_resolution_days']:.1f} days")
+print(f"Workload: {metrics['workload_by_assignee']}")
+
+# Data quality check on any dataset
+quality = kit.data_quality_scorecard(df)
+print(f"Quality Score: {quality['composite_score']}")
 ```
 
-## Data Format
-
-Expected CSV columns: `team_member, role, tool, proficiency_level, training_completed, project_assigned, onboard_date`
-
-## Project Structure
-
+## Running Tests
+```bash
+pytest tests/ -v
 ```
-analytics-team-starter-kit/
-├── src/
-│   ├── main.py          # Core analysis logic
-│   └── data_generator.py # Sample data generator
-├── data/                # Data directory (gitignored for real data)
-├── examples/            # Usage examples
-├── requirements.txt
-└── README.md
-```
-
-## License
-
-MIT License — free to use, modify, and distribute.
-
-## 🚀 New Features (2026-03-02)
-- Add role-based access control framework and competency matrix
-- Enhanced error handling and edge case coverage
-- Comprehensive unit tests and integration examples

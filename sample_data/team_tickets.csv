@@ -1,0 +1,11 @@
+ticket_id,assignee,priority,status,created_date,resolved_date,project,ticket_type
+T001,Ahmad Solikhin,High,Resolved,2026-01-05,2026-01-08,NbS Carbon MRV,Dashboard
+T002,Ahmad Solikhin,Medium,Resolved,2026-01-07,2026-01-12,PUR Monitor,Data Pipeline
+T003,Jamil Nattanon,High,Resolved,2026-01-08,2026-01-10,Thailand VCI,Report
+T004,Niken Putri,Low,Closed,2026-01-10,2026-01-18,KoboToolbox Forms,Documentation
+T005,Ahmad Solikhin,High,Resolved,2026-01-12,2026-01-15,NbS Carbon MRV,Dashboard
+T006,Jamil Nattanon,Medium,Open,2026-01-15,,Jira Rollout,Configuration
+T007,Niken Putri,High,In Progress,2026-01-18,,CPO Parcel Selection,Analysis
+T008,Ahmad Solikhin,Medium,Resolved,2026-01-20,2026-01-24,Thailand VCI,Dashboard
+T009,Jamil Nattanon,Low,Resolved,2026-01-22,2026-01-28,GIS Analysis,Report
+T010,Niken Putri,High,Resolved,2026-01-25,2026-01-29,NbS Carbon MRV,Data Pipeline
